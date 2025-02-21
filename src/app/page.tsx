@@ -1,26 +1,9 @@
 'use client';
 
-import { useEffect, useState } from 'react';
-import useSWR from 'swr';
+import useProducts from '@/hooks/useProducts';
 
 export default function Home() {
-  const [revalidate, setRevalidate] = useState(0);
-  const { data, error, isLoading, isValidating, mutate } = useSWR(
-    'https://dummyjson.com/products',
-    (...args) => fetch(...args).then((res) => res.json())
-  );
-
-  useEffect(() => {
-    if (!isValidating) {
-      setRevalidate((prev) => prev + 1);
-    }
-  }, [isValidating]);
-
-  console.log({
-    error,
-    isLoading,
-    isValidating,
-  });
+  const { data, error, isLoading } = useProducts('/products');
 
   if (error) return <div>falhou ao carregar</div>;
   if (isLoading) return <div>carregando...</div>;
