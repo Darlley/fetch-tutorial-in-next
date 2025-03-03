@@ -6,6 +6,10 @@ import { SWRConfig } from 'swr';
 
 export default function Provider({ children }: { children: ReactNode }) {
   return (
-    <SWRConfig value={{ fetcher, refreshInterval: 3000 }}>{children}</SWRConfig>
+    <SWRConfig value={{ 
+      fetcher, 
+      refreshInterval: 0,
+      revalidateOnFocus: true
+    }}>{children}</SWRConfig>
   );
 }
