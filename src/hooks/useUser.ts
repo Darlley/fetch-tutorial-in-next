@@ -1,6 +1,6 @@
 import { User } from "@/types/user";
 import useSWR from "swr";
 
-export default function useUser() {
+export function useUser() {
   return useSWR<User>("/user");
 }

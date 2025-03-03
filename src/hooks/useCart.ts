@@ -1,9 +1,9 @@
-import { Carts } from "@/types/cart";
-
 import useSWR from "swr";
-import useUser from "./useUser";
+import { useUser } from "./useUser";
+import { Cart } from "@/types/cart";
 
-export default function useCart() {
+export function useCart() {
   const { data } = useUser();
-  return useSWR<Carts>(data ? "/cart" : null);
+
+  return useSWR<Cart>(data ? "/cart" : null);
 }

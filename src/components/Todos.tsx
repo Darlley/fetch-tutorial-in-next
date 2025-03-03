@@ -9,7 +9,7 @@ export default function Todos() {
 
   return (
     <div className="bg-rose-950 p-4 rounded-3xl">
-      <h1 className='text-3xl font-bold text-rose-500 mb-4'>Products - INFINITE SCROLL</h1>
+      <h1 className='text-3xl font-bold text-rose-500 mb-4'>INFINITE SCROLL</h1>
       <ul className="flex flex-col space-y-2">
         {data.map((todos: Todo[]) => {
           return todos?.map((todo) => <li key={todo.id}>{todo.title}</li>);
