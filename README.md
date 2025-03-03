@@ -1,6 +1,8 @@
-# DATA FETCH IN NEXTJS 14 & 15
+# SWR
 
-## Learn to Fetch Data in Next.js 15 in Server & Client Components, Database Client, SWR & React Query
+![image](https://github.com/user-attachments/assets/39a0f9a4-bfc5-4d02-ae27-8853c11e85b3)
+
+Para funcionar clone e execute o servidor node: [https://github.com/codegenixdev/swr-tutorial](https://github.com/codegenixdev/swr-tutorial)
 
 Vídeo: [https://youtu.be/OPET9XQBHUE](https://youtu.be/OPET9XQBHUE)
 
@@ -26,6 +28,6 @@ Vídeo: [https://youtu.be/qURCyd3ycfw](https://youtu.be/qURCyd3ycfw)
 
 SWR é um React Hook utilizado em Client Components.
 
-Default:
+Melhor prática:
 - refreshInterval: 0
 - revalidateOnFocus: true
