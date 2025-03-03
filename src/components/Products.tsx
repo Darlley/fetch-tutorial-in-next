@@ -26,8 +26,8 @@ export default function Products() {
   };
 
   return (
-    <div className="bg-blue-950 p-4">
-      <h1 className='text-3xl font-bold text-blue-500 mb-4'>Products:</h1>
+    <div className="bg-blue-950 p-4 rounded-3xl">
+      <h1 className='text-3xl font-bold text-blue-500 mb-4'>Products - MUTATION & OPTIMISTIC</h1>
       <ul className="flex flex-col space-y-2">
         {data?.map((product, key) => (
           <li key={key}>

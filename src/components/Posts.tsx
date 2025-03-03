@@ -8,9 +8,9 @@ export default function Posts() {
   const [limit, setLimit] = useState(10);
   
   return (
-    <div className="bg-indigo-950 p-4">
+    <div className="bg-indigo-950 p-4 rounded-3xl">
       <div className="flex justify-between items-center mb-4">
-        <h1 className="text-3xl font-bold text-indigo-500">Posts</h1>
+        <h1 className="text-3xl font-bold text-indigo-500">Posts - PAGINATION</h1>
         <div className="flex justify-between items-center gap-2">
           <p>Quantidade: </p>
           <select
