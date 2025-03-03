@@ -18,22 +18,21 @@ export default function Products() {
     // mutate();
 
     const triggerOptions = {
-      optimisticData: data && [
-        ...data, 
-        { title: inputValue }
-      ],
-      rollbackOnError: true
-    }
+      optimisticData: data && [...data, { title: inputValue }],
+      rollbackOnError: true,
+    };
 
     trigger({ title: inputValue }, triggerOptions);
   };
 
   return (
-    <div>
-      <p>Products:</p>
-      <ul>
-        {data?.map((product) => (
-          <li key={product.id}>{product.title}</li>
+    <div className="bg-blue-950 p-4">
+      <h1 className='text-3xl font-bold text-blue-500 mb-4'>Products:</h1>
+      <ul className="flex flex-col space-y-2">
+        {data?.map((product, key) => (
+          <li key={key}>
+            {key} - {product.title}
+          </li>
         ))}
       </ul>
       <input
@@ -42,13 +41,10 @@ export default function Products() {
         onChange={handleUpdateInputValue}
         className="text-black"
       />
-      <button
-        onClick={handleCreateProduct}
-        className="px-1 bg-blue-500 ml-2"
-      >
+      <button onClick={handleCreateProduct} className="px-1 bg-blue-500 ml-2">
         Create Product
       </button>
-      
+
       <div>
         <p>STATE</p>
         {isLoading && <p className="text-red-500">isLoading</p>}

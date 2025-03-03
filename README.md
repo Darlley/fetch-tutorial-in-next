@@ -25,3 +25,7 @@ Vídeo: [https://youtu.be/qURCyd3ycfw](https://youtu.be/qURCyd3ycfw)
 9. Middlewares
 
 SWR é um React Hook utilizado em Client Components.
+
+Default:
+- refreshInterval: 0
+- revalidateOnFocus: true
